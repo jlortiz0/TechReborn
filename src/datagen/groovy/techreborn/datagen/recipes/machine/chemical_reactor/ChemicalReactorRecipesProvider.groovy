@@ -82,7 +82,7 @@ class ChemicalReactorRecipesProvider extends TechRebornRecipesProvider {
 			ColoredItem.createExtendedMixingColorStream(color, false, true).forEach(pair ->
 				offerChemicalReactorRecipe {
 					ingredients color.getDye(), new ItemStack(pair.getLeft().getConcretePowder(), 8)
-					output new ItemStack(pair.getRight().getCarpet(), 8)
+					output new ItemStack(pair.getRight().getConcretePowder(), 8)
 					source pair.getLeft().getConcretePowder().toString() + "_with_" + color.getDye().toString()
 					power DYE_POWER
 					time DYE_TIME
