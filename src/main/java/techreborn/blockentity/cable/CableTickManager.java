@@ -147,6 +147,9 @@ class CableTickManager {
 				long remainingAmount = maxAmount - transferredAmount;
 				// Limit max amount to the cable transfer rate.
 				long targetMaxAmount = Math.min(remainingAmount / remainingTargets, cableType.transferRate);
+				if (targetMaxAmount < 0) {
+					continue;
+				}
 
 				long localTransferred = operation.transfer(target.storage.storage, targetMaxAmount, transaction);
 				if (localTransferred > 0) {

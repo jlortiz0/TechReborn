@@ -144,7 +144,7 @@ public class NanosaberItem extends SwordItem implements RcEnergyItem {
 
 		if (slot == EquipmentSlot.MAINHAND && ItemUtils.isActive(stack)) {
 			attributes.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", TechRebornConfig.nanosaberDamage, EntityAttributeModifier.Operation.ADDITION));
-			attributes.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", 3, EntityAttributeModifier.Operation.ADDITION));
+			attributes.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", -2.6, EntityAttributeModifier.Operation.ADDITION));
 		}
 
 		return ImmutableMultimap.copyOf(attributes);
